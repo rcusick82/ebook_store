@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
   has_many :sales
-  belongs_to :authors, through: :sales
+  has_many :users, through: :sales
+  belongs_to :author
 end
