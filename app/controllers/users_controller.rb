@@ -1,3 +1,5 @@
 class UsersController < ApplicationController
-has_one_attached :avatar 
+# has_one_attached :avatar
+
+
 end
