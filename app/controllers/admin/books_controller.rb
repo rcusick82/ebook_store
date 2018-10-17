@@ -1,10 +1,10 @@
 class Admin::BooksController < ApplicationController
   def index
-    @books
+    @books = Book.all
   end
 
   def new
-    @book = book.new
+    @book = Book.new
   end
 
   def create
