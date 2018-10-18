@@ -1,8 +1,8 @@
-before_action :authenticate_user!
+<!-- before_action :authenticate_user! -->
 
 <h1>Create A New Book</h1>
 <%= form_for @book, url: {action: "create"} do |f| %>
   <h3>Title:<%= f.text_field :title %></h3>
-  <p>Body:<%= f.text_are :body %></p>
+  <p>Body:<%= f.text_area :body %></p>
   <h3>Author: <%= f.text_field :author %></h3>
-<%= end %>
+<% end %>

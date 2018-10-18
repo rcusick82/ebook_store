@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 root to: "home#home"
 
 namespace :admin do
-  resources :users, :authors, :books
+  resources :users, :authors, :books, :new
 end
 
 resources :authors, only: [:show]
