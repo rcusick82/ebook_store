@@ -8,8 +8,8 @@ class Admin::BooksController < ApplicationController
   end
 
   def create
-    Book.create(title:params[:book][:title], body:params[:book][:body], authors:[Author.find(params[:book][:authors])])
-    redirect_to admin_posts_path
+    @book = Book.create(title:params[:book][:title], body:params[:book][:body], author:params[:book][:author])
+    redirect_to admin_books_path
   end
 
   def edit
