@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'kaminari'
+
+gem 'webpacker'
+gem 'react-rails'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -51,6 +56,11 @@ group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
+  gem 'rspec-rails', '~> 3.8'
+
+  gem 'factory_bot_rails'
+
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :test do
@@ -61,6 +71,10 @@ group :test do
   gem 'chromedriver-helper'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  gem 'factory_bot_rails'
+
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 end
 

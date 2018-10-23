@@ -8,16 +8,33 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://js.stripe.com/v3/"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- application.html.erb in Head tag below turbolinks -->
+    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'application' %>
   </head>
 
   <body>
     <header>
-    <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <h1 class="c-title c-title--large">
-                World's Greatest Online Book Store
-              </h1>
-            </header>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      <div class="header-container">
+        <h1 class="c-title c-title--large">
+                  World's Greatest Online Book Store
+        </h1>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="footer-container">
+        <ul>
+          <li class="c-navigation__item">
+              <a class="c-navigation__link c-navigation__link--active home" href="#">Login</a>
+            </li>
+          <li class="c-navigation__item">
+              <a class="c-navigation__link c-navigation__link--active home" href="#">Join</a>
+            </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
